@@ -1,0 +1,42 @@
+---
+title: "Dtaa Science Capstone"
+author: "Dennis Wandschura"
+date: "2025-08-02"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Goal
+
+- Create a text model to predict the next words based on input
+- Needs to run as shiny app
+- Target mobile devices
+    - Limits memory
+    - Prediction needs to be fast
+    
+## Creating the model
+
+- N-gram model
+  - Apply transforms on training text
+  - Tokenize
+  - Create n-grams
+  - Compute probabilities
+- Stupid backoff to smooth between levels
+
+## Predicting
+
+- Apply transforms on input text
+- Tokenize input text
+- Create n-grams
+- Use model to lookup the next likely words
+
+## The App
+
+- <http://rmarkdown.rstudio.com>.
+- Easy to use
+- Write text
+- Get the most likely next 3 words
+
